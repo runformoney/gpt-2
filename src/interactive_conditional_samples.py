@@ -11,7 +11,7 @@ import model, sample, encoder
 model_name = str(input("Input Model Name (124M, 117M, 1558M):"))
 
 def interact_model(
-    model_name=model_name,
+    model_name,
     seed=None,
     nsamples=1,
     batch_size=1,
@@ -90,5 +90,5 @@ def interact_model(
             print("=" * 80)
 
 if __name__ == '__main__':
-    fire.Fire(interact_model)
+    fire.Fire(interact_model(model_name))
 
